@@ -21,7 +21,7 @@
 - name: Print URL in Task level
   hosts: all
   tasks:
-    - name:Print URL in task1
+    - name: Print URL in task1
       ansible.builtin.debug:
         msg: URL == {{URL}}
       vars:

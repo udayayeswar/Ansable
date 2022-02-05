@@ -13,6 +13,6 @@
   vars_files:
     - sample-vars.yml
   tasks:
-    - name:Print URL
+    - name: Print URL
       ansible.builtin.debug:
         msg: URL = {{URL}}

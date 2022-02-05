@@ -34,3 +34,12 @@
         URL: task2.example.com
 
 # Scope of task variable is only to that task, the other task can't access the other variables
+
+- name: variable from Inventry
+  hosts: all
+  tasks:
+    - name: Print URL
+      ansible.builtin.debug:
+        msg: URL == {{URL}}
+      vars:
+        URL: task.example.com

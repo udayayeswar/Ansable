@@ -28,7 +28,7 @@
         URL: task1.example.com
 
     - name: Print URL in task2
-      ansible.bulitin.debug:
+      ansible.builtin.debug:
         msg: URL == {{URL}}
       vars:
         URL: task2.example.com

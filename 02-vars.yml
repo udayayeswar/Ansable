@@ -9,7 +9,7 @@
 #Note: If we declare a variable in PLAY level then all the tasks cen access that variable
 
 - name: Variable from File in Play Level
-  hosta: all
+  hosts: all
   vars_files:
     - sample-vars.yml
   tasks:

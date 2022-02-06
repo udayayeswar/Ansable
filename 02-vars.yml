@@ -71,7 +71,7 @@
   tasks:
     - name: Run uptime command
       ansible.builtin.shell: uptime
-      register: out
+      register: OUT
 
     - name: Declare a standard variable name
       ansible.builtin.set_fact:

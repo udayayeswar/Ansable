@@ -69,7 +69,7 @@
 - name: Register a variable
   host: all
   tasks:
-    - name:Run uptime command
-      ansible.bulitin.shell: uptime
+    - name: Run uptime command
+      ansible.builtin.shell: uptime
       register: out
 

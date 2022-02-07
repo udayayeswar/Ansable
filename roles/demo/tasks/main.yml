@@ -2,21 +2,21 @@
   ansible.builtin.debug:
     msg: Hello from ROle
 
-- name: Print URL
-  ansible.builtin.debug:
-    msg: URL == {{URL}}
-
-- name: Copy a file
-  copy:
-    src: sample.txt
-    dest: /tmp/sample-file.txt
-  vars:
-    COURSE: DEVOPS
-
-
-- name: Copy a template
-  template:
-    src: sample.txt
-    dest: /tmp/sample-temp.txt
-  vars:
-    COURSE: DEVOPS
+#- name: Print URL
+#  ansible.builtin.debug:
+#    msg: URL == {{URL}}
+#
+#- name: Copy a file
+#  copy:
+#    src: sample.txt
+#    dest: /tmp/sample-file.txt
+#  vars:
+#    COURSE: DEVOPS
+#
+#
+#- name: Copy a template
+#  template:
+#    src: sample.txt
+#    dest: /tmp/sample-temp.txt
+#  vars:
+#    COURSE: DEVOPS

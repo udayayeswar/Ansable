@@ -2,9 +2,9 @@
   ansible.builtin.debug:
     msg: Hello from ROle
 
-#- name: Print URL
-#  ansible.builtin.debug:
-#    msg: URL == {{URL}}
+- name: Print URL
+  ansible.builtin.debug:
+     msg: URL == {{URL}}
 #
 #- name: Copy a file
 #  copy:

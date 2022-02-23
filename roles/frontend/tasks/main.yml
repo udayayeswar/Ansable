@@ -1,6 +1,6 @@
--name: print
- debug:
-   msg: Hello from frontend
+- name: print
+  debug:
+    msg: Hello from frontend
 #- name: Install Nginx
 #  ansible.builtin.yum:
 #    name: nginx

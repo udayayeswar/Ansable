@@ -1,0 +1,6 @@
+COMPONENT: catalogue
+APPTYPE: app
+
+LOG_FILES:
+  - /var/log/catalogue.log
+LOGTYPE: json

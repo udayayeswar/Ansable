@@ -19,7 +19,7 @@
   become: yes
   tags:
      - catalogue
-   roles:
+  roles:
      - catalogue
 
 - name: Setup Cart Component

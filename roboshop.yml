@@ -16,7 +16,7 @@
 
 - name: Setup Catalogue Component
   hosts: CATALOGUE
-   become: yes
+  become: yes
    tags:
      - catalogue
    roles:

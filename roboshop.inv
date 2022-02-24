@@ -1,5 +1,5 @@
-[FRONTEND]
-44.200.210.35
+[44.200.210.35]
+frontend.roboshop.internal
 
 [MONGODB]
 mongodb.roboshop.internal

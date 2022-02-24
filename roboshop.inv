@@ -1,5 +1,5 @@
 [FRONTEND]
-IP-ADDRESS
+172.31.80.101
 
 [MONGODB]
 mongodb.roboshop.internal

@@ -2,7 +2,7 @@
 172.31.80.101
 
 [MONGODB]
-172.31.14.43
+172.31.1.10
 
 [CATALOGUE]
 172.31.14.43
@@ -14,7 +14,7 @@ redis.roboshop.internal
 user.roboshop.internal
 
 [CART]
-172.31.14.43
+172.31.5.193
 
 [MYSQL]
 mysql.roboshop.internal

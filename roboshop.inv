@@ -1,5 +1,5 @@
 [FRONTEND]
-frontend.roboshop.internal
+172.31.8.141
 [mongodb]
 mongodb.roboshop.internal
 

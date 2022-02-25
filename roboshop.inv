@@ -1,7 +1,6 @@
 [FRONTEND]
 172.31.90.212
 
-
 [mongodb]
-mongodb.roboshop.internal
+172.31.1.10
 

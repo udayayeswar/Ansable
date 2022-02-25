@@ -1,5 +1,6 @@
 [FRONTEND]
-172.31.8.141
+frontend.roboshop.internal
+
 [mongodb]
 mongodb.roboshop.internal
 

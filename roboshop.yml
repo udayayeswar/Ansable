@@ -1,8 +1,6 @@
 - name: setup Frontend Component
   hosts: FRONTEND
   become: yes
-  tags:
-    - frontend
   roles:
     - frontend
 

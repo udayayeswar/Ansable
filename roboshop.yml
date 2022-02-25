@@ -7,5 +7,7 @@
 - name: setup Mongodb Component
   hosts: MONGODB
   become: YES
+  tags:
+     -mongodb
   roles:
      - mongodb

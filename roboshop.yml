@@ -1,11 +1,11 @@
 #- name: setup Frontend Component
- # hosts: FRONTEND
- # become: YES
-  #roles:
-   # - frontend
+# hosts: FRONTEND
+# become: YES
+#roles:
+ # - frontend
 
 - name: setup Mongodb Component
   hosts: MONGODB
   become: YES
   roles:
-    - mongodb
+     - mongodb

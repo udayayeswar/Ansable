@@ -9,3 +9,30 @@
      - nodejs
      - gcc-c++
      state: installed
+
+- name: Add Application User
+  ansible.builtin.user:
+    name: roboshop
+    state: present
+
+- name: Download App code
+  ansible.builtin.import_roles:
+    name: common
+    task_from: download
+
+- name: Class old app code
+  ansible.builtin.file:
+    path: /tem/roboshop/catalogue
+    state: absent
+
+- name: Copy old app code
+  ansible.builtin.copy:
+     src: /tmp/catalogue_main/
+     dest: /home/roboshop/catalogue/
+     remote_src: yes
+  become_user:roboshop
+
+- name: Install Catalogue Dependencies
+  community.general.npm:
+    path: /home/roboshop/catalogue
+  become_user: roboshop

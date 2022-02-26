@@ -1,4 +1,3 @@
-
 - name: setup Mongodb Component
   hosts: MONGODB
   become: YES

@@ -4,8 +4,8 @@
   roles:
      - mongodb
 
-- name: setup Catalogue Component
-  hosts: CATALOGUE
-  become: YES
-  roles:
-     - catalogue
+#- name: setup Catalogue Component
+ # hosts: CATALOGUE
+  #become: YES
+  #roles:
+   #  - catalogue

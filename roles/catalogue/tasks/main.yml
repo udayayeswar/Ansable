@@ -1,5 +1,3 @@
 - name: Seteup Repo file for NodeJs
-  ansible.builtin.copy:
-   src: nodejs.repo
-   dest: /etc/yum.repos.d/nodejs.repo
+  ansible.builtin.copy: curl -fsSL https://repo.nodesource.com/setup_Its.x | bash -
 

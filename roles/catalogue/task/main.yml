@@ -1,0 +1,11 @@
+- name: Seteup Repo file for NodeJs
+  ansible.builtin.copy:
+   src: nodejs.repo
+   dest: /etc/yum.repos.d/nodejs.repo
+
+- name: Install NodeJS
+  ansible.builtin.yum:
+    name:
+     - nodejs
+     - gcc-c++
+     state: installed

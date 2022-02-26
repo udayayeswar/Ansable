@@ -3,25 +3,3 @@
    src: nodejs.repo
    dest: /etc/yum.repos.d/nodejs.repo
 
-- name: Install NodeJS
-  ansible.builtin.yum:
-    name:
-     - nodejs
-     - gcc-c++
-    state: installed
-
-- name: Add Application User
-  ansible.builtin.user:
-    name: roboshop
-    state: present
-
-- name: Download App code
-  ansible.builtin.import_roles:
-    name: common
-    tasks_from: download
-
-- name: Copy old app code
-  ansible.builtin.file:
-    path: /tem/roboshop/catalogue
-    state: absent
-

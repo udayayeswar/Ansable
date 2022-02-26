@@ -17,10 +17,10 @@
 
 - name: Download App code
   ansible.builtin.import_roles:
-    name: common
-    task_from: download
+     name: common
+     task_from: download
 
-- name: Class old app code
+- name: Copy old app code
   ansible.builtin.file:
     path: /tem/roboshop/catalogue
     state: absent

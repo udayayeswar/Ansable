@@ -17,8 +17,8 @@
 
 - name: Download App code
   ansible.builtin.import_roles:
-    name: common
-    tasks_from: download
+     name: common
+     tasks_from: download
 
 - name: Copy old app code
   ansible.builtin.file:

@@ -1,8 +1,3 @@
-- name: setup Frontend Component
-  hosts: FRONTEND
-  become: YES
-  roles:
-    - frontend
 
 - name: setup Mongodb Component
   hosts: MONGODB

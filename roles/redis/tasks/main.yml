@@ -13,3 +13,9 @@
     path: "{{item}}"
     regexp: "127.0.0.1"
     replace: '0.0.0.0'
+
+- name: Start redis service
+  ansible.builtin.systemd:
+    name: redis
+    state: restarted
+    enabled: yes

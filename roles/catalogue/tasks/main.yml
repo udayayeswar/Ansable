@@ -39,7 +39,7 @@
 
 - name: Setup Catalogue SystemD config file
   ansible.builtin.templates:
-     src: system.service
+     src: systemd.service
      dest: /etc/systemd/system/catalogue.service
 
 - name: Start Catalogue service

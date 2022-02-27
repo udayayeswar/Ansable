@@ -1,11 +1,17 @@
-- name: setup Mongodb Component
-  hosts: MONGODB
-  become: YES
-  roles:
-     - mongodb
+#- name: setup Mongodb Component
+#  hosts: MONGODB
+#  become: YES
+#  roles:
+#     - mongodb
 
-- name: setup Catalogue Component
-  hosts: CATALOGUE
+#- name: setup Catalogue Component
+#  hosts: CATALOGUE
+#  become: YES
+#  roles:
+#     - catalogue
+
+- name: setup Redis Component
+  hosts: REDIS
   become: YES
   roles:
-     - catalogue
+    - redis

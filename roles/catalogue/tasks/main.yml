@@ -37,4 +37,14 @@
     path: /home/roboshop/catalogue
   become_user: roboshop
 
+- name: Setup Catalogue SystemD config file
+  ansible.builtin.template:
+    src: system.service
+    dest: /etc/systemd/system/catalogue.service
 
+- name: Start Catalogue service
+   ansible.builtin.systemd:
+     name: catalogue
+     state: restated
+     enabled: yes
+     daemon_reload: yes

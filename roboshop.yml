@@ -1,3 +1,11 @@
+- name: setup Frontend Component
+  hosts: FRONTEND
+  become: YES
+  tags:
+    - frontend
+  roles:
+    - frontend
+
 - name: setup Mongodb Component
   hosts: MONGODB
   become: YES
@@ -21,3 +29,11 @@
     - redis
   roles:
     - redis
+
+- name: setup user Component
+  hosts: USER
+  become: YES
+  tags:
+    - user
+  roles:
+    - user

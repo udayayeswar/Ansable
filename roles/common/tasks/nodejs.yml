@@ -22,29 +22,29 @@
 
 - name: Clean old app code
   ansible.builtin.file:
-    path: /home/roboshop/catalogue
+    path: /home/roboshop/{{COMPONENT}}
     state: absent
 
 - name: Copy  app code
   ansible.builtin.copy:
      src: /tmp/catalogue-main/
-     dest: /home/roboshop/catalogue/
+     dest: /home/roboshop/{{COMPONENT}}/
      remote_src: yes
   become_user: roboshop
 
-- name: Install Catalogue Dependencies
+- name: Install {{COMPONENT} Dependencies
   community.general.npm:
-    path: /home/roboshop/catalogue
+    path: /home/roboshop/{{COMPONENT}
   become_user: roboshop
 
-- name: Setup Catalogue SystemD config file
+- name: Setup {{COMPONENT} SystemD config file
   ansible.builtin.template:
     src: systemd.service
-    dest: /etc/systemd/system/catalogue.service
+    dest: /etc/systemd/system/{{COMPONENT}.service
 
-- name: Start Catalogue service
+- name: Start {{COMPONENT} service
   ansible.builtin.systemd:
-     name: catalogue
+     name: {{COMPONENT}
      state: restarted
      enabled: yes
      daemon_reload: yes

@@ -20,3 +20,20 @@
     name: common
     tasks_from: download
 
+- name: Clean old app code
+  ansible.builtin.file:
+    path: /home/roboshop/catalogue
+    state: absent
+
+- name: Copy  app code
+  ansible.builtin.copy:
+     src: /tmp/catalogue_main/
+     dest: /home/roboshop/catalogue/
+     remote_src: yes
+  become_user:roboshop
+
+- name: Install Catalogue Dependencies
+  community.general.npm:
+    path: /home/roboshop/catalogue
+  become_user: roboshop
+

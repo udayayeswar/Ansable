@@ -27,7 +27,7 @@
 
 - name: Copy  app code
   ansible.builtin.copy:
-     src: /tmp/catalogue_main/
+     src: /tmp/catalogue-main/
      dest: /home/roboshop/catalogue/
      remote_src: yes
   become_user: roboshop

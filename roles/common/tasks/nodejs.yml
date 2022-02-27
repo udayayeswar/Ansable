@@ -32,17 +32,17 @@
      remote_src: yes
   become_user: roboshop
 
-- name: Install {{COMPONENT} Dependencies
+- name: Install {{COMPONENT}} Dependencies
   community.general.npm:
-    path: /home/roboshop/{{COMPONENT}
+    path: /home/roboshop/{{COMPONENT}}
   become_user: roboshop
 
-- name: Setup {{COMPONENT} SystemD config file
+- name: Setup {{COMPONENT}} SystemD config file
   ansible.builtin.template:
     src: systemd.service
-    dest: /etc/systemd/system/{{COMPONENT}.service
+    dest: /etc/systemd/system/{{COMPONENT}}.service
 
-- name: Start {{COMPONENT} service
+- name: Start {{COMPONENT}} service
   ansible.builtin.systemd:
      name: "{{COMPONENT}}"
      state: restarted

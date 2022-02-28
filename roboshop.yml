@@ -62,4 +62,12 @@
   roles:
     - shipping
 
+- name: setup rabbitmq Component
+  hosts: RABBITMQ
+  become: YES
+  tags:
+    - rabbitmq
+  roles:
+    - rabbitmq
+
 

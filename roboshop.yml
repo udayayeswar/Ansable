@@ -54,3 +54,12 @@
   roles:
     - mysql
 
+- name: setup shipping Component
+  hosts: SHIPPING
+  become: YES
+  tags:
+    - shipping
+  roles:
+    - shipping
+
+

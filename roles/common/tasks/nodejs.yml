@@ -22,4 +22,4 @@
 - name: configure systemD for {{COMPONENT}}
   ansible.builtin.import_role:
    name: common
-   task_from: systemd
+   tasks_from: systemd

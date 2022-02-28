@@ -10,41 +10,17 @@
      - gcc-c++
     state: installed
 
-- name: Add Application User
-  ansible.builtin.user:
-    name: roboshop
-    state: present
-
-- name: Download app code
+- name: Setup Add User and App User
   ansible.builtin.import_role:
     name: common
     tasks_from: download
-
-- name: Clean old app code
-  ansible.builtin.file:
-    path: /home/roboshop/{{COMPONENT}}
-    state: absent
-
-- name: Copy  app code
-  ansible.builtin.copy:
-     src: /tmp/{{COMPONENT}}-main/
-     dest: /home/roboshop/{{COMPONENT}}/
-     remote_src: yes
-  become_user: roboshop
 
 - name: Install {{COMPONENT}} Dependencies
   community.general.npm:
     path: /home/roboshop/{{COMPONENT}}
   become_user: roboshop
 
-- name: Setup {{COMPONENT}} SystemD config file
-  ansible.builtin.template:
-    src: systemd.service
-    dest: /etc/systemd/system/{{COMPONENT}}.service
-
-- name: Start {{COMPONENT}} service
-  ansible.builtin.systemd:
-     name: "{{COMPONENT}}"
-     state: restarted
-     enabled: yes
-     daemon_reload: yes
+-name: configure sysytemD for {{COMPONENT}}
+ ansible.builtin.import_roles:
+   name: common
+   task_from: systemd

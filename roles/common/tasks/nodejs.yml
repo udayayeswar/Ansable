@@ -16,7 +16,7 @@
     tasks_from: download
 
 - name: Install {{COMPONENT}} Dependencies
-  shell: cd/home/roboshop/{{COMPONENT}} && npm install
+  shell: cd /home/roboshop/{{COMPONENT}} && npm install
   become_user: roboshop
 
 - name: configure systemD for {{COMPONENT}}

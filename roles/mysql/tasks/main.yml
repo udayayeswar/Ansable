@@ -44,15 +44,13 @@
     name: common
     tasks_from: download
 
-#- name: Load Schema
-#  community.mysql.mysql_db:
-#    state: import
-#    name: all
-#    target: /tmp/mysql-main/shipping.sql
-#    login_user: root
-#    login_password: "{{MYSQL_NEW_PASSWORD}}"
-
 - name: Load Schema
-  shell: mysql -uroot -p"{{MYSQL_NEW_PASSWORD}}" </tmp/mysql-main/shipping.sql
+  community.mysql.mysql_db:
+    state: import
+    name: all
+    target: /tmp/mysql-main/shipping.sql
+    login_user: root
+    login_password: "{{MYSQL_NEW_PASSWORD}}"
+
 
 

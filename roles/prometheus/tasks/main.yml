@@ -2,3 +2,9 @@
   template:
     src: prometheus.yml
     dest: /opt/prometheus/prometheus.yml
+
+- name: Restart prometheus
+  systemd:
+    name: prometheus
+    state: restarted
+    enabled: yes

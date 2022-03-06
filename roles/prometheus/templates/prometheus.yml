@@ -28,6 +28,9 @@ scrape_configs:
     static_configs:
       - targets: ["localhost:9090"]
   - job_name: "ec2-nodes-sd"
+    relabel_configs:
+      - source_labels: [ "__meta_ec2_tag_Name" ]
+        target_label: "nodeName"
     ec2_sd_configs:
       - region: us-east-1
 #        access_key: PUT_THE_ACCESS_KEY_HERE
